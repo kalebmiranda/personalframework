@@ -2,6 +2,7 @@
 
 .site-header {
     position: absolute;
+    width: 100%;
     padding: 1em;
     display: flex;
     justify-content: space-between;
@@ -16,10 +17,23 @@
         font-size: 1.5em;
         margin: 0;
     }
+
+    .site-id: {
+        display: flex;
+        align-items: center;
+    }
+
+    
+
+    .logo {
+        max-width: 50px; 
+        margin-right: .5em;
+    }
 }
 
     /* SITE FOOTER */
     .site-footer {
+        background: red;
         display: flex;
         padding: 1em;
         justify-content: center;
@@ -55,6 +69,14 @@
     color: white;
     text-align: center;
     padding: 6em 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+
+    .container {
+        margin-left: 0;
+        margin-right: 0;
+    }
 
     h1 {
         margin-bottom: .25em;
