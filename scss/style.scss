@@ -13,7 +13,8 @@ $breakpoint-large: 1250px;
 $color-text-body: rgba(0,0,0,.4);
 $color-text-headings: rgb(42, 42, 42);
 $color-accent: rgb(209, 108, 210);
-$color-accent-dark: rgb(209, 108, 210);
+$color-link: rgb(171, 50, 163);
+$color-link-darker: rgb(100, 26, 101);
 $color-accent-light: rgb(248, 246, 246);
 
 
@@ -24,13 +25,13 @@ $font-family-serif: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif
 $mycolor: pink;
 
 // IMPORTS
-@import "partials/toc";
+@import "partials/toc"; 
 @import "partials/typography";
-@import "partials/buttons";
-@import "partials/media";
-@import "partials/layout";
-@import "partials/grid";
-@import "partials/structure";
+// import "partials/buttons";
+// import "partials/media";
+// import "partials/layout";
+// import "partials/grid";
+// import "partials/structure";
 
 
 body {

@@ -16,6 +16,7 @@ body{
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-family-serif;
+    font-weight: 700;
 }
 
 /* BASE TYPOGRAPHY */
@@ -44,6 +45,15 @@ h3 {
 /* LIMIT NUMBER OF CHARACTERS PER LINE */
 p { 
     max-width: 30em;
+}
+
+/* LINKS */
+a {
+    color: $color-link;
+    &:hover {
+        color: $color-link-darker;
+
+    }
 }
 
 /* HORIZONTAL LINE */
@@ -78,10 +88,8 @@ hr {
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: .07em;
-    border-bottom: 2px solid $color-accent-dark;
     display: table;
-    padding: 0 0 1em 0;
-    margin: 1em auto 3em auto;
+    margin: 3em 0;
 
 }
 /* HELPERS */
