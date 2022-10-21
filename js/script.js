@@ -6,13 +6,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const mymenubutton = document.querySelector('.menu-button');
 
     mymenubutton.onclick = function () {
-        if (mysitenav.getAttribute('data-navstate') === ) {
-            mysitenav.getAttribute('data-navstate','open');
+        if (mysitenav.getAttribute('data-navstate') === ('closed')){
+            mysitenav.setAttribute('data-navstate','open')
         } else {
-                mysitenav.setAttribute('data-navstate','closed')
+            mysitenav.setAttribute('data-navstate','closed') 
+
         };
-    
+     
     };
 
+        // SCROLL  TRIGGERED ANIMATION
 
 }); 

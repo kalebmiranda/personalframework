@@ -18,7 +18,7 @@
         margin: 0;
     }
 
-    .site-id: {
+    .site-id {
         display: flex;
         align-items: center;
     }
@@ -65,10 +65,10 @@
 
 /* HERO SECTION */
 .hero {
-    background-color: black;
+    background-color: rgb(232, 232, 232);
     color: white;
     text-align: center;
-    padding: 6em 0;
+    padding: 6em 0; 
     min-height: 100vh;
     display: grid;
     place-items: center;

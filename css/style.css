@@ -277,8 +277,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  .site-id-display: flex;
-  .site-id-align-items: center;
 }
 .site-header a {
   color: white;
@@ -287,6 +285,14 @@ body {
 .site-header h1 {
   font-size: 1.5em;
   margin: 0;
+}
+.site-header .site-id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .site-header .logo {
   max-width: 50px;
@@ -330,7 +336,7 @@ section {
 
 /* HERO SECTION */
 .hero {
-  background-color: black;
+  background-color: rgb(232, 232, 232);
   color: white;
   text-align: center;
   padding: 6em 0;
@@ -376,6 +382,12 @@ section {
           justify-content: center;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.site-nav[data-navstate=closed] ul {
+  -webkit-transform: translate(100%, -100%);
+          transform: translate(100%, -100%);
 }
 .site-nav a {
   display: inline-block;
@@ -385,5 +397,7 @@ section {
 .site-nav .menu-button {
   background-color: transparent;
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
+  position: relative;
+  z-index: 20;
 }

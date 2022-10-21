@@ -16,13 +16,13 @@
         align-items: center;
         justify-content: center;
         transform: translate(0, 0);
-        transition: all .3s ease-out;
+        transition: all .3s ease-out;  
     }
 
     &[data-navstate="closed"]
     ul {
         transform: translate(100%, -100%);
-    } {
+
 
     }
     a {
@@ -34,6 +34,8 @@
     .menu-button {
         background-color: transparent;
         border: none;
-        color: white;
+        color: rgb(0, 0, 0); 
+        position: relative;
+        z-index: 20;
     }
 }
