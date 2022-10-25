@@ -301,7 +301,7 @@ body {
 
 /* SITE FOOTER */
 .site-footer {
-  background: red;
+  background: rgb(0, 0, 0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,7 +361,7 @@ section {
   margin: 0;
   padding: 0;
   list-style: none;
-  background: pink;
+  background: rgb(209, 143, 194);
   position: fixed;
   top: 0;
   right: 0;
@@ -385,6 +385,10 @@ section {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+.site-nav li {
+  font-size: 4vw;
+  min-width: 20vw;
+}
 .site-nav[data-navstate=closed] ul {
   -webkit-transform: translate(100%, -100%);
           transform: translate(100%, -100%);
@@ -395,9 +399,20 @@ section {
   line-height: 1;
 }
 .site-nav .menu-button {
-  background-color: transparent;
-  border: none;
+  position: absolute;
+  top: 1em;
+  right: 1em;
   color: rgb(0, 0, 0);
-  position: relative;
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1;
   z-index: 20;
+  cursor: pointer;
+}
+.site-nav .menu-button svg {
+  fill: black;
+}
+.site-nav .menu-button svg rect {
+  -webkit-transition: 0.3s all ease-out;
+  transition: 0.3s all ease-out;
 }

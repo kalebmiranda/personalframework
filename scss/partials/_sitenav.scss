@@ -5,7 +5,7 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        background: pink;
+        background: rgb(209, 143, 194);
         position: fixed;
         top: 0;
         right: 0;
@@ -19,7 +19,13 @@
         transition: all .3s ease-out;  
     }
 
-    &[data-navstate="closed"]
+    li {
+        font-size: 4vw;
+        min-width: 20vw;
+    }
+
+    &[data-navstate="closed"] 
+    
     ul {
         transform: translate(100%, -100%);
 
@@ -32,10 +38,21 @@
     }
 
     .menu-button {
-        background-color: transparent;
-        border: none;
+        position: absolute;
+        top: 1em;
+        right: 1em;
         color: rgb(0, 0, 0); 
-        position: relative;
+        margin: 0;
+        font-size: 1.5em;
+        line-height: 1;
         z-index: 20;
+        cursor: pointer;
+
+        svg {
+            fill: black;
+            rect {
+                transition: .3s all ease-out;
+            }
+        }
     }
 }
