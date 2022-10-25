@@ -336,7 +336,7 @@ section {
 
 /* HERO SECTION */
 .hero {
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(166, 166, 166);
   color: white;
   text-align: center;
   padding: 6em 0;
@@ -415,4 +415,47 @@ section {
 .site-nav .menu-button svg rect {
   -webkit-transition: 0.3s all ease-out;
   transition: 0.3s all ease-out;
+}
+
+/* ANIMATIONS */
+#section01 .one-half:nth-child(1) {
+  -webkit-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+  -webkit-transform: translate(-50px, 0px);
+          transform: translate(-50px, 0px);
+}
+#section01[data-sectionstate=active] .one-half:nth-child(1) {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+#section01 .one-half:nth-child(2) {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transform: translate(50px, 0px);
+          transform: translate(50px, 0px);
+}
+#section01[data-sectionstate=active] .one-half:nth-child(2) {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+#section02 .one-half:nth-child(1) {
+  -webkit-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+  -webkit-transform: translate(-50px, -50px);
+          transform: translate(-50px, -50px);
+}
+#section02[data-sectionstate=active] .one-half:nth-child(1) {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+#section02 .one-half:nth-child(2) {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transform: translate(50px, 50px);
+          transform: translate(50px, 50px);
+}
+#section02[data-sectionstate=active] .one-half:nth-child(2) {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
