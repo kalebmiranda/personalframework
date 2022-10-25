@@ -1,57 +1,75 @@
-/* ANIMATIONS */
+/* CSS ANIMATIONS */
 
-// SCROLL TRIGGERED ANIMATIONS 
+.scroll-triggered[data-sectionstate="active"] {
+    opacity: 1;
+    transition: all .4s linear .5s;
+}
 
-
-#section01 {
-
-    // ANIMATE THE FIRST COLUMN
-    .one-half:nth-child(1) {
-        transition: .2s all ease-out;
-        transform: translate(-50px, 0px);
-    }
-    &[data-sectionstate="active"] {
-        .one-half:nth-child(1) {
-            transform: translate(0, 0);
-        }
-    }
-
-     // ANIMATE THE SECOND COLUMN
-     .one-half:nth-child(2) {
-        transition:  all .2s ease-out;
-        transform: translate(50px, 0px);
-    }
-    &[data-sectionstate="active"] {
-        .one-half:nth-child(2) {
-            transform: translate(0, 0);
-        }
-    }
+.scroll-triggered[data-sectionstate="inactive"] {
+    opacity: 0;
 
 }
 
+ // ANIMATE SECTION 1 ON SCROLL */
+#section1.scroll-triggered[data-sectionstate="inactive"] {
 
-#section02 {
-
-    // ANIMATE THE FIRST COLUMN
-    .one-half:nth-child(1) {
-        transition: .2s all ease-out;
-        transform: translate(-50px, -50px);
-    }
-    &[data-sectionstate="active"] {
-        .one-half:nth-child(1) {
-            transform: translate(0, 0);
-        }
+    .jd-contentblock-image {
+        transform: translateX(-200px);
+        opacity: 0;
     }
 
-     // ANIMATE THE SECOND COLUMN
-     .one-half:nth-child(2) {
-        transition:  all .2s ease-out;
-        transform: translate(50px, 50px);
+    .jd-contentblock-text {
+        transform: translateX(200px);
+        opacity: 0;
     }
-    &[data-sectionstate="active"] {
-        .one-half:nth-child(2) {
-            transform: translate(0, 0);
-        }
-    }
-
 }
+
+#section1.scroll-triggered[data-sectionstate="active"] {
+
+    .jd-contentblock-image {
+        transform: translateX(0px);
+        opacity: 1;
+        transition: all 1s ease-out;
+    }
+
+    .jd-contentblock-text {
+        transform: translateX(0px);
+        opacity: 1;
+        transition: all 1s ease-out;
+    }
+}
+
+ // ANIMATE SECTION 2 ON SCROLL */
+ #section2.scroll-triggered[data-sectionstate="inactive"] {
+
+    background-color: #888;
+
+    .jd-contentblock-image {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+    .jd-contentblock-text {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+}
+
+
+ // ANIMATE SECTION 3 ON SCROLL */
+ #section3.scroll-triggered[data-sectionstate="inactive"] {
+    
+    .jd-contentblock-image {
+        position: relative;
+        margin-top: 4em;
+    }
+
+    #section3 .jd-character {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+}
+

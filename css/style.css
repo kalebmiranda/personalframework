@@ -79,10 +79,10 @@ p {
 
 /* LINKS */
 a {
-  color: rgb(171, 50, 163);
+  color: rgb(72, 158, 122);
 }
 a:hover {
-  color: rgb(100, 26, 101);
+  color: rgb(72, 158, 122);
 }
 
 /* HORIZONTAL LINE */
@@ -99,7 +99,7 @@ hr {
   font-weight: normal;
   line-height: 1;
   margin: 0;
-  color: rgb(209, 108, 210);
+  color: rgb(72, 158, 122);
 }
 
 .subheadline {
@@ -131,7 +131,7 @@ hr {
 /* BUTTONS */
 .button {
   display: inline-block;
-  background-color: rgb(171, 50, 163);
+  background-color: rgb(72, 158, 122);
   color: #fff;
   text-decoration: none;
   padding: 1em;
@@ -315,6 +315,10 @@ body {
   text-decoration: none;
 }
 
+.site-main {
+  overflow-x: hidden;
+}
+
 /* SITE NAV */
 .sitenav ul {
   margin: 0;
@@ -417,45 +421,66 @@ section {
   transition: 0.3s all ease-out;
 }
 
-/* ANIMATIONS */
-#section01 .one-half:nth-child(1) {
-  -webkit-transition: 0.2s all ease-out;
-  transition: 0.2s all ease-out;
-  -webkit-transform: translate(-50px, 0px);
-          transform: translate(-50px, 0px);
-}
-#section01[data-sectionstate=active] .one-half:nth-child(1) {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-#section01 .one-half:nth-child(2) {
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  -webkit-transform: translate(50px, 0px);
-          transform: translate(50px, 0px);
-}
-#section01[data-sectionstate=active] .one-half:nth-child(2) {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+/* CSS ANIMATIONS */
+.scroll-triggered[data-sectionstate=active] {
+  opacity: 1;
+  -webkit-transition: all 0.4s linear 0.5s;
+  transition: all 0.4s linear 0.5s;
 }
 
-#section02 .one-half:nth-child(1) {
-  -webkit-transition: 0.2s all ease-out;
-  transition: 0.2s all ease-out;
-  -webkit-transform: translate(-50px, -50px);
-          transform: translate(-50px, -50px);
+.scroll-triggered[data-sectionstate=inactive] {
+  opacity: 0;
 }
-#section02[data-sectionstate=active] .one-half:nth-child(1) {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+
+#section1.scroll-triggered[data-sectionstate=inactive] .jd-contentblock-image {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+  opacity: 0;
 }
-#section02 .one-half:nth-child(2) {
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  -webkit-transform: translate(50px, 50px);
-          transform: translate(50px, 50px);
+#section1.scroll-triggered[data-sectionstate=inactive] .jd-contentblock-text {
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+  opacity: 0;
 }
-#section02[data-sectionstate=active] .one-half:nth-child(2) {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+
+#section1.scroll-triggered[data-sectionstate=active] .jd-contentblock-image {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+#section1.scroll-triggered[data-sectionstate=active] .jd-contentblock-text {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+#section2.scroll-triggered[data-sectionstate=inactive] {
+  background-color: #888;
+}
+#section2.scroll-triggered[data-sectionstate=inactive] .jd-contentblock-image {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+  opacity: 0;
+}
+#section2.scroll-triggered[data-sectionstate=inactive] .jd-contentblock-text {
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+  opacity: 0;
+}
+
+#section3.scroll-triggered[data-sectionstate=inactive] .jd-contentblock-image {
+  position: relative;
+  margin-top: 4em;
+}
+#section3.scroll-triggered[data-sectionstate=inactive] #section3 .jd-character {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
 }

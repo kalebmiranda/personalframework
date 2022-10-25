@@ -29,8 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     
     
-    document.querySelectorAll('.animate-on-scroll').forEach((section) => {
-        myobserver.observe(section);
-    });
+    document.querySelectorAll('.scroll-triggered').forEach((el) => {
+        myobserver.observe(el);
+    }); 
 
 
+});
