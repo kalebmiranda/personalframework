@@ -372,7 +372,7 @@ section {
   margin: 0;
   padding: 0;
   list-style: none;
-  background: rgb(209, 143, 194);
+  background: rgb(72, 158, 122);
   position: fixed;
   top: 0;
   right: 0;
@@ -395,6 +395,7 @@ section {
           transform: translate(0, 0);
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  z-index: 10;
 }
 .site-nav li {
   font-size: 4vw;
@@ -419,9 +420,11 @@ section {
   line-height: 1;
   z-index: 20;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 .site-nav .menu-button svg {
-  fill: black;
+  fill: rgb(255, 255, 255);
 }
 .site-nav .menu-button svg rect {
   -webkit-transition: 0.3s all ease-out;
@@ -550,15 +553,15 @@ section {
   opacity: 1;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
 }
 #section2.scroll-triggered[data-sectionstate=active] .jd-contentblock-text {
   opacity: 1;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
 }
 
 /* ANIMATE SECTION 3 ON SCROLL */
